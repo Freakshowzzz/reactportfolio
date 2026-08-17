@@ -1,15 +1,13 @@
 type Interest = {
-  label: string;
-  note: string;
+  tag: string;
+  title: string;
 };
 
-// TODO: swap these for things that are actually true about you.
-// The "note" is a short, specific detail — not a full sentence.
 const INTERESTS: Interest[] = [
-  { label: "Gaming", note: "Currently playing —" },
-  { label: "Music", note: "Usually listening to —" },
-  { label: "Reading", note: "Into —" },
-  { label: "Side projects", note: "Currently building —" },
+  { tag: "Playing", title: "Dota 2" },
+  { tag: "Reading", title: "Engelwood — Crystal Dolphin" },
+  { tag: "Reading", title: "The Greatest Estate Developer" },
+  { tag: "Learning", title: "Unity Game Engine" },
 ];
 
 export default function InterestsSection() {
@@ -23,20 +21,59 @@ export default function InterestsSection() {
           A few things I'm into
         </h2>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          {INTERESTS.map((interest) => (
-            <div
-              key={interest.label}
-              className="rounded-xl border border-slate-700/50 bg-slate-900/30 p-5"
-            >
-              <p className="text-lg font-medium text-slate-100">
-                {interest.label}
-              </p>
-              <p className="mt-1 text-sm text-slate-400">{interest.note}</p>
+        {/* terminal-style log */}
+        <div className="mt-8 overflow-hidden rounded-xl border border-slate-700/50 bg-[#05070a]/60 font-mono text-sm">
+          {/* fake window chrome */}
+          <div className="flex items-center gap-1.5 border-b border-slate-700/50 px-4 py-3">
+            <span className="h-2.5 w-2.5 rounded-full bg-slate-600" />
+            <span className="h-2.5 w-2.5 rounded-full bg-slate-600" />
+            <span className="h-2.5 w-2.5 rounded-full bg-slate-600" />
+            <span className="ml-3 text-xs text-slate-500">
+              ~/adonis/interests
+            </span>
+          </div>
+
+          <div className="space-y-3 px-4 py-5">
+            {INTERESTS.map((item, index) => (
+              <div
+                key={item.title}
+                className="interest-log-line flex flex-wrap items-baseline gap-x-2 rounded-md px-2 py-1 opacity-0 transition-transform duration-200 ease-out hover:translate-x-1.5 hover:bg-sky-400/5"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
+                <span className="text-sky-400">$</span>
+                <span className="text-slate-500">
+                  now.{item.tag.toLowerCase()}
+                </span>
+                <span className="text-slate-600">→</span>
+                <span className="text-slate-100">{item.title}</span>
+              </div>
+            ))}
+
+            {/* blinking cursor line */}
+            <div className="flex items-center gap-2 pt-1">
+              <span className="text-sky-400">$</span>
+              <span className="h-4 w-2 animate-pulse bg-sky-400/70" />
             </div>
-          ))}
+          </div>
         </div>
       </div>
+
+      <style>{`
+        @keyframes log-line-in {
+          from {
+            opacity: 0;
+            transform: translateX(-8px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        .interest-log-line {
+          animation: log-line-in 0.4s ease-out forwards;
+        }
+      `}</style>
     </section>
   );
 }
