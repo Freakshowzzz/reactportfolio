@@ -21,10 +21,6 @@ export default function TechBackground() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
     let width = 0;
     let height = 0;
     let dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -107,14 +103,7 @@ export default function TechBackground() {
 
     resize();
     window.addEventListener("resize", resize);
-
-    if (prefersReducedMotion) {
-      // draw a single static frame, no animation loop
-      step();
-      cancelAnimationFrame(animationId);
-    } else {
-      animationId = requestAnimationFrame(step);
-    }
+    animationId = requestAnimationFrame(step);
 
     return () => {
       cancelAnimationFrame(animationId);
@@ -171,12 +160,6 @@ export default function TechBackground() {
           position: absolute;
           inset: 0;
           background: radial-gradient(circle at center, transparent 35%, #05070a 100%);
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-          .tech-scan {
-            animation: none !important;
-          }
         }
       `}</style>
     </div>

@@ -1,41 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
-/* Light theme (default) */
-:root {
-  --base: #f7f8fa;
-  --surface: #ffffff;
-  --surface-2: #eef0f4;
-  --border: #dfe2e8;
-  --text: #14171c;
-  --muted: #626873;
-}
-
-/* Dark theme, applied via .dark class on <html> */
-.dark {
-  --base: #0b0d10;
-  --surface: #14171c;
-  --surface-2: #1c2028;
-  --border: #272c35;
-  --text: #eef0f2;
-  --muted: #8a90a0;
-}
-
 @theme {
-  /* Color tokens — reference the CSS vars above so they respond to .dark */
-  --color-base: var(--base);
-  --color-surface: var(--surface);
-  --color-surface-2: var(--surface-2);
-  --color-border: var(--border);
-  --color-text: var(--text);
-  --color-muted: var(--muted);
-
-  /* Accent stays constant across both themes */
+  --color-base: #0b0d10;
+  --color-surface: #14171c;
+  --color-surface-2: #1c2028;
+  --color-border: #272c35;
+  --color-text: #eef0f2;
+  --color-muted: #8a90a0;
   --color-accent: #ffb454;
   --color-accent-2: #4fc3f7;
   --color-warn: #ff6b6b;
 
-  /* Fonts */
   --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
   --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
@@ -53,15 +29,14 @@
     color: var(--color-text);
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
-    transition: background-color 0.2s ease, color 0.2s ease;
   }
 }
 
 @layer utilities {
   .bg-grid {
     background-image:
-      linear-gradient(to right, var(--color-border) 1px, transparent 1px),
-      linear-gradient(to bottom, var(--color-border) 1px, transparent 1px);
+      linear-gradient(to right, #272c35 1px, transparent 1px),
+      linear-gradient(to bottom, #272c35 1px, transparent 1px);
     background-size: 40px 40px;
   }
 }

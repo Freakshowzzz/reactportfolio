@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { cn } from "@/lib/cn";
-import ThemeToggle from "@/components/ui/ThemeToggle";
+
 
 type NavLink = {
     label: string;
@@ -77,7 +77,7 @@ export default function Header() {
                     >
                         Let's talk
                     </a>
-                    <ThemeToggle />
+
                 </nav>
 
                 {/* Mobile menu toggle */}
@@ -133,7 +133,6 @@ export default function Header() {
                         Let's talk
                     </a>
                     <div className="mt-3 flex justify-center">
-                        <ThemeToggle />
                     </div>
                 </nav>
             </div>
