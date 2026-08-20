@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 
 import HomePage from "@/pages/home";
 import AboutPage from "@/pages/about";
+import ProjectsPage from "@/pages/projects";
 import Layout from "@/pages/layout.tsx";
 
 createRoot(document.getElementById("root")!).render(
@@ -12,6 +13,7 @@ createRoot(document.getElementById("root")!).render(
       <Route element={<Layout />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
       </Route>
     </Routes>
   </BrowserRouter>,

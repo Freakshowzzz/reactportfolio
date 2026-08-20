@@ -7,10 +7,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
 }
 
-/**
- * ui/Button — pure props component.
- * No knowledge of the app's content; just renders what it's told.
- */
+
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = "primary", ...props }, ref) => {
     return (

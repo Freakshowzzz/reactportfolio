@@ -6,9 +6,9 @@ type SocialLink = {
 };
 
 const SOCIAL_LINKS: SocialLink[] = [
-  { label: "GitHub", href: "https://github.com/yourhandle" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/yourhandle" },
-  { label: "Email", href: "mailto:you@example.com" },
+  { label: "GitHub", href: "https://github.com/Freakshowzzz" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/freakshowzzz" },
+  { label: "Email", href: "adonisbillyregodon@gmail.com" },
 ];
 
 export default function Footer() {

@@ -10,15 +10,14 @@ import TechBackground from "@/components/features/background/TechBackground";
  * they just render their own Section components via <Outlet />.
  *
  * Also handles scroll behavior on route/hash change: jumps to a
- * section if the URL has a hash (e.g. coming from /about back to
- * /#projects), otherwise scrolls to top on a fresh page load.
- */
+ * section if the URL has a hash otherwise scrolls to top on a fresh page load.
+ **/
 export default function Layout() {
   const location = useLocation();
 
   useEffect(() => {
     if (location.hash) {
-      // wait a tick so the target page's sections have mounted
+    
       const id = location.hash.slice(1);
       requestAnimationFrame(() => {
         document

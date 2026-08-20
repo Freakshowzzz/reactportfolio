@@ -8,7 +8,7 @@ export default function HeroSection() {
       className="flex min-h-[calc(100vh-4rem)] items-center px-6 sm:px-12"
     >
       <div className="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-        {/* Text column */}
+       
         <div>
           <p className="mb-4 font-mono text-xs uppercase tracking-[0.3em] text-sky-400">
             Adonis Billy Regodon — Developer
@@ -46,7 +46,6 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Photo card column */}
         <ProfileCard />
       </div>
     </section>

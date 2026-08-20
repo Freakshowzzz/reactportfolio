@@ -1,13 +1,6 @@
 import { useRef } from "react";
 import heroImage from "@/assets/hero.png";
 
-/**
- * ProfileCard — a HUD-style photo card with:
- *  - mouse-tracked 3D tilt
- *  - a glow that follows the cursor
- *  - animated corner brackets
- *  - a scan-line sweep on hover
- */
 export default function ProfileCard() {
   const cardRef = useRef<HTMLDivElement>(null);
 

@@ -125,7 +125,7 @@ export default function TechStackSection() {
                   </div>
                 </button>
 
-                {/* Expandable detail panel */}
+             
                 <div
                   className={cn(
                     "grid overflow-hidden transition-[grid-template-rows] duration-300 ease-out",
