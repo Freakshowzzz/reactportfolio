@@ -67,15 +67,15 @@ export default function Header() {
               <span className="absolute -bottom-1 left-0 h-px w-0 bg-sky-400 transition-all duration-300" />
             </Link>
           ))}
-          <a
-            href="/#contact"
+          <Link
+            to="/contact"
             className={cn(
               "rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-sm text-sky-300 transition-colors",
               "hover:border-sky-400/60 hover:bg-sky-400/20"
             )}
           >
             Let's talk
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile menu toggle */}
@@ -123,13 +123,13 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <a
-            href="/#contact"
+          <Link
+            to="/contact"
             onClick={() => setMenuOpen(false)}
             className="mt-2 rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-2 text-center text-sm text-sky-300"
           >
             Let's talk
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

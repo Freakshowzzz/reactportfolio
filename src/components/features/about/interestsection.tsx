@@ -7,7 +7,7 @@ const INTERESTS: Interest[] = [
   { tag: "Playing", title: "Dota 2" },
   { tag: "Listening", title: "Engelwood — Crystal Dolphin" },
   { tag: "Reading", title: "The Greatest Estate Developer" },
-  { tag: "Learning", title: "Unity Game Engine" },
+  { tag: "Learning", title: "Unity" },
 ];
 
 export default function InterestsSection() {
@@ -23,7 +23,6 @@ export default function InterestsSection() {
 
         {/* terminal-style log */}
         <div className="mt-8 overflow-hidden rounded-xl border border-slate-700/50 bg-[#05070a]/60 font-mono text-sm">
-
           {/* fake window chrome */}
           <div className="flex items-center gap-1.5 border-b border-slate-700/50 px-4 py-3">
             <span className="h-2.5 w-2.5 rounded-full bg-slate-600" />

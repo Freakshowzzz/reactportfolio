@@ -51,7 +51,7 @@ export const PROJECTS: Project[] = [
     image: "/projects/portfolio2.png",
   },
   {
-    id: "group-project",
+    id: "group-project1",
     title: "Infographics Project",
     category: "Group Project",
     description:
@@ -61,7 +61,7 @@ export const PROJECTS: Project[] = [
     image: "/projects/group project.png",
   },
   {
-    id: "group-project",
+    id: "group-project2",
     title: "Public Store Web System",
     category: "Group Project",
     description:

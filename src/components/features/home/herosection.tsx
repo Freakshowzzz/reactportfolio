@@ -1,14 +1,17 @@
+import { useNavigate } from "react-router";
 import Button from "@/components/ui/button";
 import ProfileCard from "@/components/features/home/profilecard";
 
 export default function HeroSection() {
+  const navigate = useNavigate();
+
   return (
     <section
       id="home"
       className="flex min-h-[calc(100vh-4rem)] items-center px-6 sm:px-12"
     >
       <div className="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-       
+        {/* Text column */}
         <div>
           <p className="mb-4 font-mono text-xs uppercase tracking-[0.3em] text-sky-400">
             Adonis Billy Regodon — Developer
@@ -23,29 +26,16 @@ export default function HeroSection() {
             templated.
           </p>
           <div className="mt-8 flex gap-4">
-            <Button
-              variant="primary"
-              onClick={() =>
-                document
-                  .getElementById("projects")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-            >
+            <Button variant="primary" onClick={() => navigate("/projects")}>
               View projects
             </Button>
-            <Button
-              variant="outline"
-              onClick={() =>
-                document
-                  .getElementById("contact")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-            >
+            <Button variant="outline" onClick={() => navigate("/contact")}>
               Let's talk
             </Button>
           </div>
         </div>
 
+        {/* Photo card column */}
         <ProfileCard />
       </div>
     </section>
